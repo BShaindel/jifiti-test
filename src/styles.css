@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import('./css/bootstrap.min.css')*/
+@import url("assets/bootstrap/dist/scss/bootstrap.scss");
+@import url("assets/bootstrap/dist/scss/bootstrap-reboot.scss");
+@import url("assets/bootstrap/dist/scss/bootstrap-grid.scss");
+
+/*# sourceMappingURL=styles.css.map */

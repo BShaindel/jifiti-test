@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="bg-info-color navbar form-inline">
+
+<div class="form-group" style ="width:100%">
+  <label for="genderSelect" class="col-1 text-light">Gender</label>
+  <select class="form-control col-2 mr-5" name="genderSelect" id="genderSelect" title="Gender" [(ngModel)]="genderListFilter" (ngModelChange)="selectGender()">
+    <option  [ngValue]="gender.Value" *ngFor="let gender of jsonContent.GenderFilter">{{gender.DisplayText}}</option>
+    <option  value="all"  >Both</option>
+  </select>
+
+  <label for="budgetSelect" class="col-1 text-light">Budget</label>
+  <select class="form-control col-2 " name="budgetSelect" id="budgetSelect" [(ngModel)]="budgetListFilter" (ngModelChange)="selectBudget()">
+    <option [ngValue]="budget"  minValue="budget.minValue" maxValue="budget.maxValue" *ngFor="let budget of allBudgets" >{{budget.displayText}}</option>
+  </select>
+
+  <a class="col-5 text-right my-2">
+    <small class="text-light">Powered by</small>
+    <img src="https://gifts.jifiti.com/wp-content/uploads/2017/02/sticky-logo.png" alt="">
+  </a>
+</div>
+</nav>
+
+
+<div class="card-columns">
+<div *ngFor="let store of jsonContent.Stores">
+  <div  class="card text-center" *ngFor="let product of store.Products | genderfilter: 'ProductTags' : genderSelected | budgetfilter: 'Price' : priceMinSelected : priceMaxSelected">
+    <img src="{{(product.ProductImage!=null)? (product.ProductImage):'/assets/img/Present_Box.png'}}" class="img-fluid" style="width: inherit"/>
+    <div class="card-block">
+      <h6 class="card-title text-info-color text-border">{{store.StoreName}}</h6>
+      <p class="card-text font-weight-bold mb-0">{{product.PriceLabel}}</p>
+      <p class="card-text" title="{{product.ProductTitle}}">{{ (product.ProductTitle.length>20)? (product.ProductTitle | slice:0:30)+'...':(product.ProductTitle) }}</p>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
