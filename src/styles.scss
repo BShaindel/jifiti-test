@@ -5,26 +5,3 @@
 @import url("assets/bootstrap/dist/css/bootstrap-grid.css");
 
 
-.card-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 1.25rem;
-}
-nav{
-  margin: 1rem 0;
-  padding:1rem 2.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius:3px;
-}
-.text-border{
-  border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 11px;
-}
-.text-info-color{
-  color:#0073bb;
-}
-.bg-info-color{
-  background-color:#bd1f1f;
-}

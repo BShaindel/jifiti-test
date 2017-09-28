@@ -40,11 +40,9 @@ export class ProductComponent {
   }
 
   public selectGender(){
-    console.log(this.genderListFilter,'11111111')
     this.genderSelected = this.genderListFilter;
   }
   public selectBudget(){
-    console.log(this.budgetListFilter,'11111111')
     this.priceMinSelected = this.budgetListFilter['minValue'];
     this.priceMaxSelected = this.budgetListFilter['maxValue'];
   }
